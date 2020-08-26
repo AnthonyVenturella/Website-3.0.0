@@ -1,0 +1,23 @@
+h1 {
+  font-size: 70px;
+}
+
+.open-sans-cond {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.jumbotron {
+    background:transparent;
+    margin-bottom: 0 !important;
+    color: #666666
+}
+
+.profile-pic {
+    max-width: 75%;
+    max-height: 75%;
+    border-radius: 50%;
+}
+
+.sm-text {
+    font-size: small;
+}
