@@ -1,3 +1,5 @@
+![License](imgs/license/88x31.png)
+
 # Protected Under the Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License
 >This is a human-readable summary of (and not a substitute for) the license, the full license is available below: 
 >https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
