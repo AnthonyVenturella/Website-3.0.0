@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>UniCourse</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="text-center">
+        <div class="container-fluid top-bar">
+            <div class="row">
+
+                <div class="col my-auto text-left dropdown">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="view-drop" data-toggle="dropdown">
+                            Weekly View
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item disabled" href="Gr4-weekly1.html">Weekly View</a>
+                            <a class="dropdown-item" href="#">Calendar View</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <span class="title-text text-center">UniCourse</span>
+                </div>
+                <div class="col my-auto text-right">
+                    <div class="dropdown">
+                        <button class="btn" type="button" id="ham-drop" data-toggle="dropdown">
+                            <img src="imgs/ham.png" height="30" />
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Gr4-weekly1.html">Current Week</a>
+                            <a class="dropdown-item" href="Gr4-add_task.html">Add Tasks</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="h-divider"></div>
+
+    <div class="text-center mb-3 mt-3">
+        <a href="Gr4-weekly1.html"><img src="imgs/arrow_left.png" height="20" /></a>
+        <span class="weekly-text">Weekly Overview</span>
+        <a href="Gr4-weekly3.html"><img src="imgs/arrow_right.png" height="20" /></a>
+    </div>
+
+    <div class="container-fluid" id="weekly-view">
+        <div class="row text-center">
+            <div class="col">
+                <span class="date-title">November 16th</span>
+                <div class="h-divider" style="border-top:1px solid white;"></div>
+                Monday
+
+                <p class="mt-5">
+                    CLASSES:
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="blue" stroke-width=".5" fill="blue" />
+                        <span>CS - 109</span>
+                    </svg></p>
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="yellow" stroke-width=".5" fill="yellow" />
+                        <span>CS - 121</span>
+                    </svg></p>
+
+                </p>
+                <p class="mt-5">
+                    TASKS:
+                    <p class="list-item"><svg height="10" width="10">
+                        <span>Break: 5:00 PM</span>
+                    </svg></p>
+                    <a href="Gr4-task.html" class="text-link"><p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="green" stroke-width=".5" fill="green" />
+                        <span>Homework 3: 11:59 PM</span>
+                    </svg></p></a>
+                </p>
+
+                <p><br /></p>
+                <a href="Gr4-add_task.html" class="btn week-cont" id="mon-but">
+                    <img src="imgs/plus.png" height="30" />
+                </a>
+            </div>
+
+            <div class="v-divider my-auto"></div>
+
+            <div class="col">
+                <span class="date-title">November 17th</span>
+                <div class="h-divider" style="border-top:1px solid white;"></div>
+                Tuesday
+
+                <p class="mt-5">
+                    CLASSES:
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="green" stroke-width=".5" fill="green" />
+                        <span>CS - 111</span>
+                    </svg></p>
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="red" stroke-width=".5" fill="red" />
+                        <span>MUS - 100</span>
+                    </svg></p>
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="white" stroke-width=".5" fill="white" />
+                        <span>PHY - 101</span>
+                    </svg></p>
+                <p class="mt-5">
+                    TASKS:
+                    <p class="list-item"><svg height="10" width="10">
+                        <span>Interview: 2:00 PM</span>
+                    </svg></p>
+                </p>
+
+                <p><br /></p>
+                <a href="Gr4-add_task.html" class="btn week-cont" id="tues-but">
+                    <img src="imgs/plus.png" height="30" />
+                </a>
+            </div>
+
+            <div class="v-divider my-auto"></div>
+
+            <div class="col">
+                <span class="date-title">November 18th</span>
+                <div class="h-divider" style="border-top:1px solid white;"></div>
+                Wednesday
+
+                <p class="mt-5">
+                    CLASSES:
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="blue" stroke-width=".5" fill="blue" />
+                        <span>CS - 109</span>
+                    </svg></p>
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="yellow" stroke-width=".5" fill="yellow" />
+                        <span>CS - 121</span>
+                    </svg></p>
+                <p class="mt-5">
+                    TASKS:
+                    <a href="Gr4-task.html" class="text-link"><p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="yellow" stroke-width=".5" fill="yellow" />
+                        <span>Project 2: 11:59PM</span>
+                    </svg></p></a>
+                </p>
+
+                <p><br /></p>
+                <a href="Gr4-add_task.html" class="btn week-cont" id="wed-but">
+                    <img src="imgs/plus.png" height="30" />
+                </a>
+            </div>
+
+            <div class="v-divider my-auto"></div>
+
+            <div class="col">
+                <span class="date-title">November 19th</span>
+                <div class="h-divider" style="border-top:1px solid white;"></div>
+                Thursday
+
+                <p class="mt-5">
+                    CLASSES:
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="green" stroke-width=".5" fill="green" />
+                        <span>CS - 111</span>
+                    </svg></p>
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="red" stroke-width=".5" fill="red" />
+                        <span>MUS - 100</span>
+                    </svg></p>
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="white" stroke-width=".5" fill="white" />
+                        <span>PHY - 101</span>
+                    </svg></p>
+                <p class="mt-5">
+                    TASKS:
+                </p>
+
+                <p><br /></p>
+                <a href="Gr4-add_task.html" class="btn week-cont" id="thurs-but">
+                    <img src="imgs/plus.png" height="30" />
+                </a>
+            </div>
+
+            <div class="v-divider my-auto"></div>
+
+            <div class="col">
+                <span class="date-title">November 20th</span>
+                <div class="h-divider" style="border-top:1px solid white;"></div>
+                Friday
+
+                <p class="mt-5">
+                    CLASSES:
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="blue" stroke-width=".5" fill="blue" />
+                        <span>CS - 109</span>
+                    </svg></p>
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="yellow" stroke-width=".5" fill="yellow" />
+                        <span>CS - 121</span>
+                    </svg></p>
+                <p class="mt-5">
+                    TASKS:
+                    <a href="Gr4-task.html" class="text-link"><p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="green" stroke-width=".5" fill="green" />
+                        <span>Project 2: 11:59 PM</span>
+                    </svg></p></a>
+                </p>
+
+                <p><br /></p>
+                <a href="Gr4-add_task.html" class="btn week-cont" id="fri-but">
+                    <img src="imgs/plus.png" height="30" />
+                </a>
+            </div>
+
+            <div class="v-divider my-auto"></div>
+
+            <div class="col">
+                <span class="date-title">November 21st</span>
+                <div class="h-divider" style="border-top:1px solid white;"></div>
+                Saturday
+
+                <p class="mt-5">
+                    CLASSES:
+                </p>
+                <p class="mt-5">
+                    TASKS:
+                    <p class="list-item"><svg height="10" width="10">
+                        <span>Chess Club: 10:00 AM</span>
+                    </svg></p>
+                </p>
+
+                <p><br /></p>
+                <a href="Gr4-add_task.html" class="btn week-cont" id="sat-but">
+                    <img src="imgs/plus.png" height="30" />
+                </a>
+            </div>
+
+            <div class="v-divider my-auto"></div>
+
+            <div class="col">
+                <span class="date-title">November 22nd</span>
+                <div class="h-divider" style="border-top:1px solid white;"></div>
+                Sunday
+
+                <p class="mt-5">
+                    CLASSES:
+                </p>
+                <p class="mt-5">
+                    TASKS:
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="red" stroke-width=".5" fill="red" />
+                        <span>Exam 2: 11:59 PM</span>
+                    </svg></p>
+                <p><br /></p>
+                <a href="Gr4-add_task.html" class="btn week-cont" id="sun-but">
+                    <img src="imgs/plus.png" height="30" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
