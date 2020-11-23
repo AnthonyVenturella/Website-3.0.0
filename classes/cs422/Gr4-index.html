@@ -12,6 +12,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <script>
+        var email = "test@user.com";
+        var password = "12345";
+
+        $(document).ready(function(){
+            $('#password').keypress(function(event){
+                if(event.keyCode === 13){
+                    if(($('#email').val() == email) && ($('#password').val() == password)){
+                        window.location = "Gr4-weekly1.html";
+                    } else {
+                        alert("Invalid user name or password");
+                    }
+                }
+            });
+
+            $('#login_btn').click(function(){
+                if(($('#email').val() == email) && ($('#password').val() == password)){
+                    window.location = "Gr4-weekly1.html";
+                } else {
+                    alert("Invalid user name or password");
+                }
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -43,10 +68,11 @@
                     <p class="text-link dropdown-toggle" data-toggle="dropdown">FORGOT PASSWORD?</p>
 
                     <div class="dropdown-menu">
-                        <p class="dropdown-item disabled">You dont have one click login</p>
+                        <p class="dropdown-item disabled">Not implemented (no backend)</br>but if you forget:</br>test@user.com</br>12345</p>
                     </div>
                 </div>
-                <a href="Gr4-weekly1.html" class="btn btn-secondary btn-lg active btn-block" role="button">Login</a>
+                <!-- <a href="" id="login_btn" class="btn btn-secondary btn-lg active btn-block" role="button">Login</a> -->
+                <button id="login_btn" class="btn btn-secondary btn-lg active btn-block" role="button">Login</button>
 
             </div>
 

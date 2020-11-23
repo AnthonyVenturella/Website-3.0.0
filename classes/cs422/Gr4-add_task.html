@@ -12,6 +12,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <script>
+
+        $(document).ready(function(){
+
+            $('#task_btn').click(function(){
+                if(($('#form-task').val() != "") && ($('#form-date').val() != "") && ($('#form-time').val() != "")){
+                    window.location = "Gr4-weekly1.html";
+                    alert("Added " + $('#form-task').val() +  " on: " +  $('#form-date').val() +  " at: " + $('#form-time').val());
+                } else {
+                    alert("Please fill out all fields.");
+                }
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -35,6 +50,8 @@
                         </button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="Gr4-weekly1.html">Courses Overview</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Gr4-index.html">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -72,11 +89,15 @@
                 </div>
 
                 <span>Date:</span>
-                <input id="form-date" type="text" class="form-control mb-2 text-center" name="form-date" placeholder="11/9/20">
+                <input id="form-date" type="date" class="form-control mb-2 text-center" name="form-date" placeholder="11/9/2020">
                 <span>Time:</span>
-                <input id="form-time" type="text" class="form-control mb-2 text-center" name="form-time" placeholder="HH:MM">
+                <input id="form-time" type="time" class="form-control mb-2 text-center" name="form-time" placeholder="HH:MM">
 
-                <a href="Gr4-weekly1.html" class="btn btn-secondary btn-lg active btn-block mt-5" role="button">Add Task</a>
+                <div class="text-center">
+                    <a href="Gr4-weekly1.html" class="btn btn-danger btn-lg active mt-5" role="button">Cancel</a>
+                    <button id="task_btn" class="btn btn-secondary btn-lg active mt-5" role="button" type="submit">Add Task</button>
+                    <!-- <a href="Gr4-weekly1.html" id="task_btn" class="btn btn-secondary btn-lg active mt-5" role="button">Add Task</a> -->
+                </div>
 
             </div>
 

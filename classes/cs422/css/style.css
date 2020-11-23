@@ -86,3 +86,7 @@ svg {
     margin-right: auto;
     text-align: center;
 }
+
+.hidden-arow {
+    visibility: hidden;
+}
