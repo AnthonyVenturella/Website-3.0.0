@@ -90,3 +90,7 @@ svg {
 .hidden-arow {
     visibility: hidden;
 }
+
+.modal-text{
+    color: #000000;
+}

@@ -12,6 +12,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <script>
+        $(document).ready(function(){
+            $('.delete_btn').click(function(){
+                alert("Delete not supported (no backend)");
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -27,7 +35,7 @@
                         </button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item disabled" href="Gr4-weekly1.html">Weekly View</a>
-                            <a class="dropdown-item" href="Gr4-calendar.html">Calendar View</a>
+                            <a class="dropdown-item" href="Gr4-calendar.html">Monthly View</a>
                         </div>
                     </div>
                 </div>
@@ -43,6 +51,8 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="Gr4-weekly1.html">Current Week</a>
                             <a class="dropdown-item" href="Gr4-add_task.html">Add Tasks</a>
+                            <div class="dropdown-divider"></div>
+                            <button type="button" class="btn dropdown-item" data-toggle="modal" data-target="#modal_help">Help</button>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="Gr4-index.html">Logout</a>
                         </div>
@@ -83,7 +93,11 @@
                     TASKS:
                     <p class="list-item"><svg height="10" width="10">
                         <span>Interview: 1:30 PM</span>
-                    </svg></p>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_01">
+                            <img src="imgs/garbage.png" height="15" class="mb-1" />
+                        </button>
+                    </p>
+
                 </p>
 
                 <p><br /></p>
@@ -140,10 +154,13 @@
                     </svg></p>
                 <p class="mt-5">
                     TASKS:
-                    <a href="Gr4-task.html" class="text-link"><p class="list-item"><svg height="10" width="10">
-                        <circle cx="5" cy="5" r="3" stroke="yellow" stroke-width=".5" fill="yellow" />
-                        <span>Exam 2: 11:59PM</span>
-                    </svg></p></a>
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="yellow" stroke-width=".5" fill="yellow" /></svg>
+                        <a href="Gr4-task.html" class="text-link mr-2"><span>Exam 2: 11:59PM</span></a>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_02">
+                            <img src="imgs/garbage.png" height="15" class="mb-1" />
+                        </button>
+                    </p>
                 </p>
 
                 <p><br /></p>
@@ -174,10 +191,14 @@
                     </svg></p>
                 <p class="mt-5">
                     TASKS:
-                    <a href="Gr4-task.html" class="text-link"><p class="list-item"><svg height="10" width="10">
-                        <circle cx="5" cy="5" r="3" stroke="white" stroke-width=".5" fill="white" />
-                        <span>Exam 1: 11:59PM</span>
-                    </svg></p></a>
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="white" stroke-width=".5" fill="white" /></svg>
+                        <a href="Gr4-task.html" class="text-link mr-2"><span>Exam 1: 11:59PM</span></a>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_03">
+                            <img src="imgs/garbage.png" height="15" class="mb-1" />
+                        </button>
+                    </p>
+
                 </p>
 
                 <p><br /></p>
@@ -204,10 +225,13 @@
                     </svg></p>
                 <p class="mt-5">
                     TASKS:
-                    <a href="Gr4-task.html" class="text-link"><p class="list-item"><svg height="10" width="10">
-                        <circle cx="5" cy="5" r="3" stroke="blue" stroke-width=".5" fill="blue" />
-                        <span>Homework 3: 11:59 PM</span>
-                    </svg></p></a>
+                    <p class="list-item"><svg height="10" width="10">
+                        <circle cx="5" cy="5" r="3" stroke="blue" stroke-width=".5" fill="blue" /></svg>
+                        <a href="Gr4-task.html" class="text-link mr-2"><span>Homework 3: 11:59 PM</span></a>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_04">
+                            <img src="imgs/garbage.png" height="15" class="mb-1" />
+                        </button>
+                    </p>
                 </p>
 
                 <p><br /></p>
@@ -229,7 +253,10 @@
                     TASKS:
                     <p class="list-item"><svg height="10" width="10">
                         <span>Golfing: 8:30 AM</span>
-                    </svg></p>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modal_05">
+                            <img src="imgs/garbage.png" height="15" class="mb-1" />
+                        </button>
+                    </p>
                 </p>
 
                 <p><br /></p>
@@ -257,6 +284,106 @@
                 </a>
             </div>
         </div>
+    </div>
+
+    <div class="modal fade" id="modal_01" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title modal-text" id="exampleModalLongTitle">Delete Task</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-text">Are you sure you want to delete <kbd>Interview</kbd> ?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            <button type="button" id="delete_btn" data-dismiss="modal" class="btn delete_btn btn-primary">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal_02" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title modal-text" id="exampleModalLongTitle">Delete Task</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-text">Are you sure you want to delete <kbd>Exam 2</kbd> ?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            <button type="button" id="delete_btn" data-dismiss="modal" class="btn delete_btn btn-primary">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal_03" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title modal-text" id="exampleModalLongTitle">Delete Task</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-text">Are you sure you want to delete <kbd>Exam 1</kbd> ?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            <button type="button" id="delete_btn" data-dismiss="modal" class="btn delete_btn btn-primary">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal_04" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title modal-text" id="exampleModalLongTitle">Delete Task</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-text">Are you sure you want to delete <kbd>Homework 3</kbd> ?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            <button type="button" id="delete_btn" data-dismiss="modal" class="btn delete_btn btn-primary">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal_05" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title modal-text" id="exampleModalLongTitle">Delete Task</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-text">Are you sure you want to delete <kbd>Golfing</kbd> ?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            <button type="button" id="delete_btn" data-dismiss="modal" class="btn delete_btn btn-primary">Delete</button>
+          </div>
+        </div>
+      </div>
     </div>
 
 </body>
