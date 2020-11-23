@@ -17,6 +17,48 @@
             $('.delete_btn').click(function(){
                 alert("Delete not supported (no backend)");
             });
+
+            $('#mon-but').click(function(){
+                localStorage.setItem('date', '2020-11-23');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly3.html');
+                window.location = "Gr4-add_task.html";
+            });
+
+            $('#tues-but').click(function(){
+                localStorage.setItem('date', '2020-11-24');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly3.html');
+                window.location = "Gr4-add_task.html";
+            });
+
+            $('#wed-but').click(function(){
+                localStorage.setItem('date', '2020-11-25');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly3.html');
+                window.location = "Gr4-add_task.html";
+            });
+
+            $('#thurs-but').click(function(){
+                localStorage.setItem('date', '2020-11-26');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly3.html');
+                window.location = "Gr4-add_task.html";
+            });
+
+            $('#fri-but').click(function(){
+                localStorage.setItem('date', '2020-11-27');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly3.html');
+                window.location = "Gr4-add_task.html";
+            });
+
+            $('#sat-but').click(function(){
+                localStorage.setItem('date', '2020-11-28');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly3.html');
+                window.location = "Gr4-add_task.html";
+            });
+
+            $('#sun-but').click(function(){
+                localStorage.setItem('date', '2020-11-29');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly3.html');
+                window.location = "Gr4-add_task.html";
+            });
         });
     </script>
 
@@ -50,7 +92,7 @@
                         </button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="Gr4-weekly1.html">Current Week</a>
-                            <a class="dropdown-item" href="Gr4-add_task.html">Add Tasks</a>
+                            <a class="dropdown-item" href="Gr4-add_task.html">Add Task</a>
                             <div class="dropdown-divider"></div>
                             <button type="button" class="btn dropdown-item" data-toggle="modal" data-target="#modal_help">Help</button>
                             <div class="dropdown-divider"></div>
@@ -284,6 +326,27 @@
                 </a>
             </div>
         </div>
+    </div>
+
+    <div class="modal fade" id="modal_help" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title modal-text" id="exampleModalLongTitle">Help</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-text"><kbd>Deleting a task</kbd> Navigate to the desired task in the weekly overview and select the garbage can to delete.</p>
+            <p class="modal-text"><kbd>Viewing a task</kbd> Select the hyperlinked task in the weekly overview to view more information, attached files, and submission guidelines.</p>
+            <p class="modal-text"><kbd>Adding a task</kbd> Create a new task by selecting the "Plus" icon on your desired day, or by selecting "Add task" in the hamburger menu.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-primary">Okay</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="modal fade" id="modal_01" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

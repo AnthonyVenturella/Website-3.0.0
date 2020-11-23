@@ -17,6 +17,48 @@
             $('.delete_btn').click(function(){
                 alert("Delete not supported (no backend)");
             });
+
+            $('#mon-but').click(function(){
+                localStorage.setItem('date', '2020-11-09');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly1.html');
+                window.location = "Gr4-add_task.html";
+            });
+
+            $('#tues-but').click(function(){
+                localStorage.setItem('date', '2020-11-10');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly1.html');
+                window.location = "Gr4-add_task.html";
+            });
+
+            $('#wed-but').click(function(){
+                localStorage.setItem('date', '2020-11-11');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly1.html');
+                window.location = "Gr4-add_task.html";
+            });
+
+            $('#thurs-but').click(function(){
+                localStorage.setItem('date', '2020-11-12');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly1.html');
+                window.location = "Gr4-add_task.html";
+            });
+
+            $('#fri-but').click(function(){
+                localStorage.setItem('date', '2020-11-13');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly1.html');
+                window.location = "Gr4-add_task.html";
+            });
+
+            $('#sat-but').click(function(){
+                localStorage.setItem('date', '2020-11-14');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly1.html');
+                window.location = "Gr4-add_task.html";
+            });
+
+            $('#sun-but').click(function(){
+                localStorage.setItem('date', '2020-11-15');
+                localStorage.setItem('rtnWeek', 'Gr4-weekly1.html');
+                window.location = "Gr4-add_task.html";
+            });
         });
     </script>
 
@@ -50,7 +92,7 @@
                         </button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="Gr4-weekly1.html">Current Week</a>
-                            <a class="dropdown-item" href="Gr4-add_task.html">Add Tasks</a>
+                            <a class="dropdown-item" href="Gr4-add_task.html">Add Task</a>
                             <div class="dropdown-divider"></div>
                             <button type="button" class="btn dropdown-item" data-toggle="modal" data-target="#modal_help">Help</button>
                             <div class="dropdown-divider"></div>
@@ -246,9 +288,12 @@
                 </p>
 
                 <p><br /></p>
-                <a href="Gr4-add_task.html" class="btn week-cont" id="sat-but">
-                    <img src="imgs/plus.png" height="30" />
+                <a class="week-cont" id="sat-but">
+                    <button class="btn task_btn">
+                        <img src="imgs/plus.png" height="30" />
+                    </button>
                 </a>
+
             </div>
 
             <div class="v-divider my-auto"></div>
@@ -272,13 +317,17 @@
                     </p>
 
                 <p><br /></p>
-                <a href="Gr4-add_task.html" class="btn week-cont" id="sun-but">
-                    <img src="imgs/plus.png" height="30" />
+                <a class="week-cont" id="sun-but">
+                    <button class="btn task_btn">
+                        <img src="imgs/plus.png" height="30" />
+                    </button>
                 </a>
             </div>
         </div>
     </div>
 
+
+<!-- Hardcoded modals -->
     <div class="modal fade" id="modal_help" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -289,10 +338,12 @@
             </button>
           </div>
           <div class="modal-body">
-            <p class="modal-text">I am help</p>
+            <p class="modal-text"><kbd>Deleting a task</kbd> Navigate to the desired task in the weekly overview and select the garbage can to delete.</p>
+            <p class="modal-text"><kbd>Viewing a task</kbd> Select the hyperlinked task in the weekly overview to view more information, attached files, and submission guidelines.</p>
+            <p class="modal-text"><kbd>Adding a task</kbd> Create a new task by selecting the "Plus" icon on your desired day, or by selecting "Add task" in the hamburger menu.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" id="delete_btn" data-dismiss="modal" class="delete_btn btn btn-primary">Okay</button>
+            <button type="button" data-dismiss="modal" class="btn btn-primary">Okay</button>
           </div>
         </div>
       </div>
